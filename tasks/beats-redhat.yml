@@ -21,6 +21,7 @@
     name: yum-plugin-versionlock
     state: present
     update_cache: true
+  when: version_lock
   register: versionlock_install
   until: versionlock_install is succeeded
 
